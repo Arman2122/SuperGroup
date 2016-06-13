@@ -17,13 +17,13 @@ local function enable_channel(receiver)
 	end
 
 	if _config.disabled_channels[receiver] == nil then
-		return 'Tornado Doesn't Off ! 😁'
+		return 'Blaster Doesn't Off ! 😁'
 	end
 	
 	_config.disabled_channels[receiver] = false
 
 	save_config()
-	return "Tornado Is On ! 😃"
+	return "Blaster Is On ! 😃"
 end
 
 local function disable_channel( receiver )
@@ -34,7 +34,7 @@ local function disable_channel( receiver )
 	_config.disabled_channels[receiver] = true
 
 	save_config()
-	return "Tornado Is Off ! 😴"
+	return "Blaster Is Off ! 😴"
 end
 
 local function pre_process(msg)
@@ -49,7 +49,7 @@ local function pre_process(msg)
 	end
 
   if is_channel_disabled(receiver) then
-  	msg.text = "Tornado Is On ! 😃"
+  	msg.text = "Blaster Is On ! 😃"
   end
 
 	return msg
