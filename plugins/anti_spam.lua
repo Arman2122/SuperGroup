@@ -1,9 +1,8 @@
---An empty table for solving multiple kicking problem(thanks to @topkecleon )
-kicktable = {}
+
 
 do
 
-local TIME_CHECK = 2 -- seconds
+local TIME_CHECK = 1 -- seconds
 -- Save stats, ban user
 local function pre_process(msg)
   -- Ignore service msg
@@ -156,7 +155,6 @@ local function pre_process(msg)
 end
 
 local function cron()
-  --clear that table on the top of the plugins
 	kicktable = {}
 end
 
